@@ -18,7 +18,7 @@ To begin, we need data to search through. While there are many ways to interact 
 * Between the script tags, declare a variable called characters and set its value to an empty array.
 * Using `fetch` make a request to the SWAPI API at `/api/people`s and store the resulting data in the people array.
   * Usage of the fetch API can be found <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">here.</a>
-  * Usage of the SWAPI API can be found <a href="https://www.swapi.co">here.</a>
+  * Usage of the SWAPI API can be found <a href="https://www.swapi.dev">here.</a>
 
 ### Solution
 
@@ -29,7 +29,7 @@ To begin, we need data to search through. While there are many ways to interact 
 ```js
 const characters = [];
 
-fetch('https://www.swapi.co/api/people')
+fetch('https://www.swapi.dev/api/people')
     .then(response => response.json())
     .then(response => characters.push(...response.results))
 
@@ -77,7 +77,7 @@ In this step, we'll make our data appear on the page. To dynamically add content
 const characters = [];
 const list = document.getElementById('list');
 
-fetch('https://www.swapi.co/api/people')
+fetch('https://www.swapi.dev/api/people')
     .then(response => response.json())
     .then(response => {
       characters.push(...response.results);
@@ -131,7 +131,7 @@ const characters = [];
 const list = document.getElementById('list');
 const search = document.querySelector('input');
 
-fetch('https://www.swapi.co/api/people')
+fetch('https://www.swapi.dev/api/people')
     .then(response => response.json())
     .then(response => characters.push(...response.results))
 
